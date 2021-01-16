@@ -38,10 +38,34 @@
         </script>
     </div>
      <div>
-        <audio controls="controls" src="music/ricksanchez666.github.io/1.mp3">
-            你的浏览器太垃圾，不支持音乐播放
-        </audio>
+        <audio src="ricksanchez666.github.io/music/1.mp3" controls="controls" id="music"></audio>
+        <button id="prev">上一首</button>
+        <button id="next">下一首</button>
     </div>
+    <script>
+        var count = 1;
+        prev.onclick = function () {
+            if (count > 1) {
+                count = count - 1;
+            } else {
+                count = 4;
+            }
+            music.src = "ricksanchez666.github.io/music/" + count + ".mp3";
+            music.play();
+        }
+        next.onclick = function () {
+            if (count < 4) {
+                count = count + 1;
+            } else {
+                count = 1;
+            }
+            music.src = "ricksanchez666.github.io/music/" + count + ".mp3";
+            music.play();
+        }
+        music.addEventListener('ended', function () {
+            next.onclick();
+        }, false);
+    </script>
     <div>
         <h1>欢迎浏览，这是我自制的网页，非常好用哦</h1>
     </div>
