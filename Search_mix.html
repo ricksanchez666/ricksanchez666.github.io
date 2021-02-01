@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="author" content="Sanchez">
+        <meta name="keywords" content="搜索大全">
+        <title>搜素大全</title>
+        <style>
+            .about-title{
+                font-size: 180%;
+                text-align: center;
+                color: #34495e;
+            }
+            .p1{
+                color: #7f8c8d;
+                font: 16px;
+                text-align: center!important;
+            }
+            .input-all{
+                width: 600px;
+                height: 40px;
+                text-align: center;
+                border-color: #5eb95e!important;
+            }
+            input.submit{
+                background-color: #4CAF50; /* Green */    
+                border: none;
+                color: white;    
+                padding: 10px 18px;    
+                text-align: center;    
+                text-decoration: none;    
+                display: inline-block;    
+                font-size: 16px;    
+                margin: 4px 2px;    
+                -webkit-transition-duration: 0.4s; /* Safari */    
+                 transition-duration: 0.4s;    
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function search(x){
+                var baseurl;
+                var url;
+                if (x == 1) {
+                    baseurl = "https://www.baidu.com/s?wd=";
+                }else if (x == 2) {
+                    baseurl = "https://www.sogou.com/web?query=";
+                }else if (x == 3) {
+                    baseurl = "https://cn.bing.com/search?mkt=zh-cn&pc=LVBT&form=CNTP59&ensearch=0&q=";
+                }else if (x == 4) {
+                    baseurl = ""
+                }else if (x == 5) {
+                    baseurl = "https://www.so.com/s?ie=utf-8&fr=none&src=360sou_newhome&q="
+                }else if (x == 6) {
+                    baseurl = "https://search.bilibili.com/all?keyword="
+                }else if (x == 7) {
+                    baseurl = ""
+                }
+                get = document.getElementById("input").value
+                url = baseurl + get
+                window.open(url, target="_Self")
+            }
+            function sayerror(){
+                alert("该搜索引擎暂不能用！正在维护中。")
+            };
+        </script>
+    </head>
+    <body>
+        <header>
+            <h2 class="about-title">搜索大全:一站式搜索服务</h2>
+            <p class="p1">注:本页面由Sanchez开发，仅供个人使用，如由问题请与开发者联系</p>
+        </header>
+        <hr>
+        <div>
+            <div style="text-align: center;">
+                <input id="input" class="input-all" placeholder="搜索一下，你就知道">
+            </div>
+            <div style="text-align: center;">
+                <input type="submit" value="百度" class="submit" onclick="search(1)">
+                <input type="submit" value="搜狗" class="submit" onclick="search(2)">
+                <input type="submit" value="Bing" class="submit" onclick="search(3)">
+                <input type="submit" value="谷歌" class="submit" onclick="sayerror()">
+                <input type="submit" value="360" class="submit" onclick="search(5)">
+                <input type="submit" value="B站" class="submit" onclick="search(6)">
+                <input type="submit" value="雅虎" class="submit" onclick="sayerror()">
+            </div>
+        </div>
+        <div>
+            <address style="text-align: center; color: red;">
+                Made by:Sanchez
+            </address>
+        </div>
+    </body>
+</html>
