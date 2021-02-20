@@ -1,38 +1,77 @@
-body {
-    margin: 0;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0%;
-    padding: 0;
-    width: 15%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-}
-
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-li a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
 iframe{
-    margin-left: 15%;
+    margin-left: 0%;
     margin-right: 0%;
     margin-top: 0%;
-    width: 85%;
+    width: 83%;
     height: 1000px;
+    display: block;
+}
+.col-left{
+    width: 15%;
+    display: block;
+    margin-right: 1%;
+    float: left;
+    padding: 0;
+}
+.tab{
+    opacity: .7;
+    padding-left: 4px;
+    font-weight: 400;
+    display: block;
+    font-size: 22px;
+    line-height: 50px;
+    font-family: proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: black;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 15%);
+    border: 1px solid rgba(0,0,0,.1);
+    border-bottom: 0;
+    border-top-left-radius: 3px;
+    background-clip: padding-box;
+    background-color: #f2f2f2;
+}
+.fa{
+    display: inline-block;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-reorder::before{
+    content: "⊙";
+    font-size: 22px;
+}
+.list{
+    padding: 0;
+    background: #fff;
+    margin: 0 0 20px 0;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+}
+.design{
+    padding: 4px;
+    margin: 0;
+    overflow: hidden;
+}
+.nav{
+    cursor: pointer;
+    margin: 8px 2px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: inherit;
+    font-family: proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: grey;
+}
+.fa-link::before{
+    content: "◎";
+    font-size: 25px;
+}
+.lista{
+    text-decoration: none;
+    color: grey;
 }
